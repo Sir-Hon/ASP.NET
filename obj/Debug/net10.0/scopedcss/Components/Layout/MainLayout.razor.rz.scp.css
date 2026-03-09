@@ -1,0 +1,164 @@
+:root[b-n5unpwdrjt] {
+    --green: #00ff41;
+    --green-dim: #00aa2b;
+    --green-glow: rgba(0, 255, 65, 0.15);
+    --bg: #000000;
+    --bg-surface: #050505;
+    --bg-panel: #0a0a0a;
+    --red: #ff003c;
+    --amber: #ffb300;
+    --text-muted: #3a5c3a;
+}
+
+html[b-n5unpwdrjt], body[b-n5unpwdrjt] {
+    background-color: var(--bg);
+    color: var(--green);
+    font-family: 'Share Tech Mono', monospace;
+    cursor: crosshair;
+}
+
+/* Scanline overlay on entire page */
+body[b-n5unpwdrjt]::before {
+    content: '';
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background: repeating-linear-gradient(
+        0deg,
+        transparent,
+        transparent 2px,
+        rgba(0, 0, 0, 0.08) 2px,
+        rgba(0, 0, 0, 0.08) 4px
+    );
+    pointer-events: none;
+    z-index: 9999;
+}
+
+.page[b-n5unpwdrjt] {
+    position: relative;
+    display: flex;
+    flex-direction: column;
+    background-color: var(--bg);
+    min-height: 100vh;
+}
+
+main[b-n5unpwdrjt] {
+    flex: 1;
+    background-color: var(--bg);
+}
+
+.sidebar[b-n5unpwdrjt] {
+    background-color: var(--bg-panel);
+    background-image:
+        linear-gradient(180deg, rgba(0,255,65,0.04) 0%, transparent 100%);
+    border-right: 1px solid var(--green-dim);
+    box-shadow: 4px 0 20px rgba(0, 255, 65, 0.05);
+}
+
+.top-row[b-n5unpwdrjt] {
+    background-color: var(--bg-panel);
+    border-bottom: 1px solid var(--green-dim);
+    justify-content: flex-end;
+    height: 3.5rem;
+    display: flex;
+    align-items: center;
+    box-shadow: 0 2px 12px rgba(0, 255, 65, 0.07);
+    position: relative;
+    overflow: hidden;
+}
+
+/* Scrolling binary/text ticker on top bar */
+.top-row[b-n5unpwdrjt]::before {
+    content: '01001000 01000001 01000011 01001011 00100000 01010100 01001000 01000101 00100000 01010000 01001100 01000001 01001110 01000101 01010100';
+    position: absolute;
+    left: 0;
+    font-size: 0.55rem;
+    color: var(--text-muted);
+    white-space: nowrap;
+    animation: ticker-b-n5unpwdrjt 18s linear infinite;
+    letter-spacing: 0.1em;
+}
+
+@keyframes ticker-b-n5unpwdrjt {
+    0%   { transform: translateX(100vw); }
+    100% { transform: translateX(-100%); }
+}
+
+    .top-row[b-n5unpwdrjt]  a,
+    .top-row[b-n5unpwdrjt]  .btn-link {
+        white-space: nowrap;
+        margin-left: 1.5rem;
+        text-decoration: none;
+        color: var(--green);
+        font-family: 'Share Tech Mono', monospace;
+        letter-spacing: 0.05em;
+        transition: color 0.2s, text-shadow 0.2s;
+    }
+
+    .top-row[b-n5unpwdrjt]  a:hover,
+    .top-row[b-n5unpwdrjt]  .btn-link:hover {
+        color: #fff;
+        text-shadow: 0 0 8px var(--green), 0 0 20px var(--green);
+        text-decoration: none;
+    }
+
+@media (max-width: 640.98px) {
+    .top-row[b-n5unpwdrjt] {
+        justify-content: space-between;
+    }
+    .top-row[b-n5unpwdrjt]  a,
+    .top-row[b-n5unpwdrjt]  .btn-link {
+        margin-left: 0;
+    }
+}
+
+@media (min-width: 641px) {
+    .page[b-n5unpwdrjt] {
+        flex-direction: row;
+    }
+    .sidebar[b-n5unpwdrjt] {
+        width: 250px;
+        height: 100vh;
+        position: sticky;
+        top: 0;
+    }
+    .top-row[b-n5unpwdrjt] {
+        position: sticky;
+        top: 0;
+        z-index: 1;
+    }
+    .top-row.auth[b-n5unpwdrjt]  a:first-child {
+        flex: 1;
+        text-align: right;
+        width: 0;
+    }
+    .top-row[b-n5unpwdrjt], article[b-n5unpwdrjt] {
+        padding-left: 2rem !important;
+        padding-right: 1.5rem !important;
+    }
+}
+
+#blazor-error-ui[b-n5unpwdrjt] {
+    color-scheme: dark only;
+    background: #1a0000;
+    border-top: 1px solid var(--red);
+    color: var(--red);
+    bottom: 0;
+    box-shadow: 0 -2px 20px rgba(255, 0, 60, 0.3);
+    box-sizing: border-box;
+    display: none;
+    left: 0;
+    padding: 0.6rem 1.25rem 0.7rem 1.25rem;
+    position: fixed;
+    width: 100%;
+    z-index: 1000;
+    font-family: 'Share Tech Mono', monospace;
+}
+
+    #blazor-error-ui .dismiss[b-n5unpwdrjt] {
+        cursor: pointer;
+        position: absolute;
+        right: 0.75rem;
+        top: 0.5rem;
+        color: var(--red);
+    }
