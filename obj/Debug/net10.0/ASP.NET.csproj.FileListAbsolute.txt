@@ -83,4 +83,4 @@ C:\Users\USER\OneDrive\Documents\ASP.NET\ASP.NET\obj\Debug\net10.0\refint\ASP.NE
 C:\Users\USER\OneDrive\Documents\ASP.NET\ASP.NET\obj\Debug\net10.0\ASP.NET.pdb
 C:\Users\USER\OneDrive\Documents\ASP.NET\ASP.NET\obj\Debug\net10.0\ASP.NET.genruntimeconfig.cache
 C:\Users\USER\OneDrive\Documents\ASP.NET\ASP.NET\obj\Debug\net10.0\ref\ASP.NET.dll
-C:\Users\USER\OneDrive\Documents\ASP.NET\ASP.NET\obj\Debug\net10.0\compressed\zvzr9827oz-{0}-qvxghlpjrd-qvxghlpjrd.gz
+C:\Users\USER\OneDrive\Documents\ASP.NET\ASP.NET\obj\Debug\net10.0\compressed\zvzr9827oz-{0}-2m5wrfcb8e-2m5wrfcb8e.gz

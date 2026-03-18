@@ -190,6 +190,36 @@ h1:focus {
     font-size: 0.9rem;
 }
 
+.contact-icons {
+    display: inline-flex;
+    gap: 0.4rem;
+    margin-left: 0.8rem;
+    vertical-align: middle;
+}
+
+.contact-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 28px;
+    height: 28px;
+    border-radius: 50%;
+    border: 1px solid rgba(0, 255, 65, 0.3);
+    background: rgba(0, 255, 65, 0.12);
+    transition: background 0.2s ease, transform 0.2s ease;
+}
+
+.contact-icon:hover {
+    background: rgba(0, 255, 65, 0.25);
+    transform: translateY(-1px);
+}
+
+.contact-icon svg {
+    width: 14px;
+    height: 14px;
+    fill: rgba(0, 255, 65, 0.9);
+}
+
 /* ── Portrait ── */
 .home-portrait {
     position: relative;
